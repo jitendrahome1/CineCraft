@@ -238,3 +238,7 @@ This project is licensed under the MIT License.
 
 For issues and questions, please open an issue on GitHub.
 # CineCraft
+
+
+#model
+qwen/qwen3.6-plus:free
