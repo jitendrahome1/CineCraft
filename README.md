@@ -241,4 +241,4 @@ For issues and questions, please open an issue on GitHub.
 
 
 #model
-qwen/qwen3.6-plus:free
+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
