@@ -7,6 +7,7 @@ from typing import Optional, Dict, Any
 from app.providers.base.image_provider import ImageProvider
 from app.providers.image.dalle import DallEProvider
 from app.providers.image.gemini import GeminiImageProvider
+from app.providers.image.openrouter import OpenRouterImageProvider
 from app.providers.image.unsplash import UnsplashImageProvider
 from app.providers.image.placeholder import PlaceholderImageProvider
 from app.core.errors import ConfigurationError
@@ -21,6 +22,7 @@ class ImageProviderFactory:
     _providers: Dict[str, type[ImageProvider]] = {
         "dalle": DallEProvider,
         "gemini": GeminiImageProvider,
+        "openrouter": OpenRouterImageProvider,
         "unsplash": UnsplashImageProvider,
         "placeholder": PlaceholderImageProvider,
     }
@@ -91,6 +93,8 @@ def get_image_provider_from_config(
             api_key = settings.GEMINI_API_KEY
         elif provider_name == "dalle":
             api_key = settings.OPENAI_API_KEY or settings.IMAGE_PROVIDER_API_KEY
+        elif provider_name == "openrouter":
+            api_key = settings.OPENROUTER_API_KEY
         else:
             api_key = settings.IMAGE_PROVIDER_API_KEY
 
