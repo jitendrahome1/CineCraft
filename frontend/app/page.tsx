@@ -3,6 +3,7 @@
  */
 import Link from 'next/link';
 import { Button } from '@/components/ui';
+import PricingSection from '@/components/pricing/PricingSection';
 
 export default function HomePage() {
   return (
@@ -18,6 +19,9 @@ export default function HomePage() {
               <span className="text-xl font-bold text-gray-900">CineCraft</span>
             </div>
             <div className="flex items-center space-x-4">
+              <a href="#pricing">
+                <Button variant="ghost">Pricing</Button>
+              </a>
               <Link href="/login">
                 <Button variant="ghost">Login</Button>
               </Link>
@@ -90,6 +94,11 @@ export default function HomePage() {
           </div>
         </div>
       </main>
+
+      {/* Pricing Section */}
+      <div id="pricing">
+        <PricingSection />
+      </div>
     </div>
   );
 }

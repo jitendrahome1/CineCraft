@@ -13,6 +13,7 @@ import {
   Settings,
   BarChart3,
   Users,
+  CreditCard,
 } from 'lucide-react';
 
 interface NavItem {
@@ -42,6 +43,11 @@ const navItems: NavItem[] = [
     name: 'Analytics',
     href: '/analytics',
     icon: BarChart3,
+  },
+  {
+    name: 'Pricing',
+    href: '/pricing',
+    icon: CreditCard,
   },
   {
     name: 'Settings',
